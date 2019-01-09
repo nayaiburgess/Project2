@@ -1,9 +1,9 @@
-const show = require('../models/show')
+const shows = require('../models/show')
 
 const showController = {
     index: (req, res) => {
-        Car.find({}).then((show) => {
-            res.send(show)
+        shows.find({}).then((shows) => {
+            res.send(shows)
         })
     }
 }
