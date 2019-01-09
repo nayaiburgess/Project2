@@ -2,10 +2,10 @@ const mongoose = require('../db/connections')
 const Schema = mongoose.Schema
 
 const runwayModel = new Schema({
-    Name: string,
-    Age: number,
-    Phone: number,
-    Email: string,
+    Name: String,
+    Age: Number,
+    Phone: Number,
+    Email: String,
     Shows: []
 })
 module.exports = mongoose.model("runwayModel", runwayModel)
