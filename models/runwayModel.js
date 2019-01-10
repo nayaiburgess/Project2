@@ -1,11 +1,11 @@
 const mongoose = require('../db/connections')
 const Schema = mongoose.Schema
 
-const runwayModel = new Schema({
-    Name: String,
-    Age: Number,
-    Phone: Number,
-    Email: String,
-    Shows: []
+const RunwayModel = new Schema({
+    name: String,
+    age: Number,
+    phone: Number,
+    email: String,
+    shows: []
 })
-module.exports = mongoose.model("runwayModel", runwayModel)
+module.exports = mongoose.model("RunwayModel", RunwayModel)

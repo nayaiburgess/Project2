@@ -1,9 +1,9 @@
 const mongoose = require('../db/connections')
 const Schema = mongoose.Schema
 
-const agency = new Schema({
-    Name: String,
-    Phone: Number,
-    Email: String
+const Agency = new Schema({
+    name: String,
+    phone: Number,
+    email: String
 })
-module.exports = mongoose.model("agency", agency)
+module.exports = mongoose.model("Agency", Agency)

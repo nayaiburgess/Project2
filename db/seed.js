@@ -1,4 +1,4 @@
-const shows = require('../models/shows')
+const shows = require('../models/show')
 
 shows.deleteMany({})
     .then(() => {
