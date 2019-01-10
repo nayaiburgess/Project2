@@ -12,8 +12,8 @@ router.get('/fashionshows/new', showController.new) // form to new show
 router.post('/fashionshows', showController.create) // posting to list of shows
 router.get('/fashionshows/:id', showController.show) //show specifc show
 router.get('/fashionshows/:id/editshow', showController.edit) // edit the show
-router.patch('/fashionshows/:id', showController.update) // updates the specific show 
-router.delete('/fashionshows/:id', showController.delete) // deletes show 
+router.patch('/:id', showController.update) // updates the specific show 
+router.delete('/:id', showController.delete) // deletes show 
 
 router.get('/modelprofile', runwayModelController.index) // all profiles
 router.get('/modelprofile/new', runwayModelController.new) // form to new model profile
