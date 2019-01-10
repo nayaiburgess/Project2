@@ -25,6 +25,6 @@ router.get('/agencies', agencyController.index) // all agencies
 router.get('/agencies/new', agencyController.new) // form to new agency 
 router.post('/agencies', agencyController.create) // post to list of agencies
 router.get('/agencies/:id', agencyController.show) // one agency
-router.delete('/agencies/:id', agencyController.delete) //delete agency 
+router.delete('/agencies/:id', agencyController.delete) //delete profile
 
 module.exports = router
