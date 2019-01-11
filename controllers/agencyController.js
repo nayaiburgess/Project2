@@ -7,7 +7,7 @@ const agencyController = {
         })
     },
     new: (req, res) => {
-        res.render("agency/newagency")
+        res.render("agency/agencyprofile")
     },
     create: (req, res) => {
         console.log(req.body)
@@ -16,14 +16,14 @@ const agencyController = {
             phone: req.body.phone,
             email: req.body.email
         }).then(agency => {
-            res.redirect('/agencies')
+            res.redirect('/fashionshows/new')
         })
     },
     show: (req, res) => {
         const agencyId = req.params.id
         agency.findById(agencyId).then((agency) => {
           console.log(agency)
-          res.render('views/agency', { agency })
+          res.render('agency/viewagency', { agency })
         })
       },
     delete: (req, res) => {

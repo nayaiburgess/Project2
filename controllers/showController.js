@@ -3,8 +3,12 @@ const shows = require('../models/show')
 const showController = {
     index: (req, res) => {
         shows.find({}).then((showsRes) => {
-            console.log(showsRes)
+            if (req.params.check == "model"){
+            res.render('fashionshow/modelshow', {showsList: showsRes})
+            }
+            else{
             res.render('fashionshow/show', {showsList: showsRes})
+            }
         })
     },
     new: (req, res) => {
@@ -25,8 +29,12 @@ const showController = {
     show: (req, res) => {
         const showId = req.params.id
         shows.findById(showId).then((show) => {
-          console.log(showId)
+          if (req.params.check == "model"){
+          res.render('fashionshow/modelviewshow', {show})
+          }
+          else{
           res.render('fashionshow/viewshow', { show })
+          }
         })
       },
     edit: (req, res) => {

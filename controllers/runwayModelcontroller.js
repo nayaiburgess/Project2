@@ -18,7 +18,7 @@ const runwayModelController = {
             email: req.body.email,
             shows: []
         }).then(model => {
-            res.redirect('/fashionshows')
+            res.redirect('/fashionshows/model')
         })
     },
     show: (req, res) => {
