@@ -3,7 +3,7 @@ const model = require('../models/runwayModel')
 const runwayModelController = {
     index: (req, res) => {
         model.find({}).then((model) => {
-            res.render('models/modelprofile', {model})
+            res.render('models/viewmodel', {model})
         })
     },
     new: (req, res) => {
@@ -18,14 +18,14 @@ const runwayModelController = {
             email: req.body.email,
             shows: []
         }).then(model => {
-            res.redirect('/fashionshows/model')
+            res.redirect('model/fashionshows')
         })
     },
     show: (req, res) => {
         const modelId = req.params.id
         model.findById(modelId).then((model) => {
           console.log(model)
-          res.render('models/modelprofile', { model })
+          res.render('models/viewmodel', { model })
         })
       },
     delete: (req, res) => {

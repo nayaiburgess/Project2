@@ -1,8 +1,14 @@
-<section class="section">
-    <div class="container">
-      <h1 class="title">Events</h1>
-     </div>
-  </section> 
+<nav class="level">
+  <p class="level-item has-text-centered">
+    <a href="/modelprofile" class="link is-info">Models</a>
+  </p>
+  <p class="level-item has-text-centered">
+   <strong style="font-size:70px;">SHOW LINK</strong>
+  </p>
+  <p class="level-item has-text-centered">
+    <a href='/agencies' class="link is-info">Agencies</a>
+  </p>
+</nav> 
   {{#each showsList}}
 
  <article class="media">
@@ -20,23 +26,10 @@
       
       </p>
     </div>
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-reply"></i></span>
-        </a>
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-        </a>
-        <a class="level-item">
-          <span class="icon is-small"><i class="fas fa-heart"></i></span>
-        </a>
-      </div>
-    </nav>
   </div>
   <div class="media-right">
    <a href="/fashionshows/{{_id}}/agency"><button>View Event</button></a>
-        <a><button>Add Event</button></a>
   </div>
 </article>
 {{/each}}
+<a href="fashionshows/new"><button>Create Event</button></a>

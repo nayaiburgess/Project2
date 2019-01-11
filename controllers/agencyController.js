@@ -3,7 +3,7 @@ const agency = require('../models/agency')
 const agencyController = {
     index: (req, res) => {
         agency.find({}).then((agency) => {
-            res.render('agency/agency', {agency})
+            res.render('agency/viewagency', {agency})
         })
     },
     new: (req, res) => {
@@ -16,13 +16,12 @@ const agencyController = {
             phone: req.body.phone,
             email: req.body.email
         }).then(agency => {
-            res.redirect('/fashionshows/new')
+            res.redirect('agencies/fashionshows')
         })
     },
     show: (req, res) => {
         const agencyId = req.params.id
         agency.findById(agencyId).then((agency) => {
-          console.log(agency)
           res.render('agency/viewagency', { agency })
         })
       },

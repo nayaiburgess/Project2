@@ -1,14 +1,14 @@
 const shows = require('../models/show')
 
 const showController = {
-    index: (req, res) => {
+    indexModels: (req, res) => {
         shows.find({}).then((showsRes) => {
-            if (req.params.check == "model"){
-            res.render('fashionshow/modelshow', {showsList: showsRes})
-            }
-            else{
+            res.render('fashionshow/modelshow', {showsList: showsRes})  
+        })
+    },
+    indexAgencies: (req, res) => {
+        shows.find({}).then((showsRes) => {
             res.render('fashionshow/show', {showsList: showsRes})
-            }
         })
     },
     new: (req, res) => {
@@ -22,19 +22,13 @@ const showController = {
             email: req.body.email,
             flyer: req.body.flyer
         }).then(show => {
-            console.log(show)
-            res.redirect(`/fashionshows`)
+            res.redirect(`/agencies/fashionshows`)
         })
     },
     show: (req, res) => {
         const showId = req.params.id
         shows.findById(showId).then((show) => {
-          if (req.params.check == "model"){
-          res.render('fashionshow/modelviewshow', {show})
-          }
-          else{
           res.render('fashionshow/viewshow', { show })
-          }
         })
       },
     edit: (req, res) => {
@@ -44,15 +38,14 @@ const showController = {
     },
     update: (req, res) => {
         const showId = req.params.id
-        console.log(req.body)
         shows.findByIdAndUpdate(showId, req.body, {new: true}).then((show) => {
-            res.redirect(`/fashionshows`)
+            res.redirect(`/agencies/fashionshows`)
         })
     },
     delete: (req, res) => {
         const showId = req.params.id
         shows.findByIdAndRemove(showId).then(() => {
-            res.redirect('/fashionshows')
+            res.redirect('/agencies/fashionshows')
         })
     }
 }

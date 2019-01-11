@@ -1,18 +1,22 @@
-<section class="section">
-    <div class="container">
-      <h1 class="title">Events</h1>
-      {{#each showsList}}
-      <h2 class="subtitle">
-        {{name}}
-        </h2>
-        <p>
-        {{date}}
-        {{address}}
-        {{email}}
-        {{_id}}
-        </p>
-        <img src="{{flyer}}">      
-        </img>
-        {{/each}}
+{{#each model}}
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+      <figure class="image is-64x64">
+        <img src="{{flyer}}" alt="Image">
+      </figure>
     </div>
-  </section>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong>{{name}}</strong> <small>{{email}}</small>
+          <br>
+          {{phone}}
+        </p>
+      </div>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
+{{/each}}
