@@ -3,11 +3,11 @@ const model = require('../models/runwayModel')
 const runwayModelController = {
     index: (req, res) => {
         model.find({}).then((model) => {
-            res.render('views/modelprofile', {model})
+            res.render('models/modelprofile', {model})
         })
     },
     new: (req, res) => {
-        res.render("views/newmodel")
+        res.render("models/modelprofile")
     },
     create: (req, res) => {
         console.log(req.body)
@@ -25,7 +25,7 @@ const runwayModelController = {
         const modelId = req.params.id
         model.findById(modelId).then((model) => {
           console.log(model)
-          res.render('views/modelprofile', { model })
+          res.render('models/modelprofile', { model })
         })
       },
     delete: (req, res) => {

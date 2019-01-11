@@ -3,11 +3,11 @@ const agency = require('../models/agency')
 const agencyController = {
     index: (req, res) => {
         agency.find({}).then((agency) => {
-            res.render('views/agency', {agency})
+            res.render('agency/agency', {agency})
         })
     },
     new: (req, res) => {
-        res.render("views/newagency")
+        res.render("agency/newagency")
     },
     create: (req, res) => {
         console.log(req.body)
