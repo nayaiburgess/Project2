@@ -1,0 +1,36 @@
+<form action="/fashionshows/{{showId}}?_method=PATCH" method="POST">
+    <div class="field">
+  <label class="label">{{name}}</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="e.g Alex Smith" name="name">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">{{date}}</label>
+  <div class="control">
+    <input class="input" type="date" placeholder="e.g. 'Month Day, Year'" name="date">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">{{address}}</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="e.g. Street Address" name="address">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">{{email}}</label>
+  <div class="control">
+    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com" name="email">
+  </div>
+</div>
+<div class="field">
+  <label class="label">{{flyer}}</label>
+  <div class="control">
+    <input class="input" type="link" placeholder="e.g. www.myflyer.com" name="flyer">
+  </div>
+</div>
+<button type="submit">Edit Event</button>
+</form>

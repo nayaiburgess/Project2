@@ -10,6 +10,10 @@
         {{show.email}}
         </p>
       <img src="{{flyer}}" width="150vw" height="150vh"></img>
-      
+      <form action="/{{show._id}}?_method=DELETE" method="POST">
+       <button class="btn" type="submit">Delete Event</button>
+       
+   </form>
+   <a href="/fashionshows/{{show._id}}/editshow"><button>Edit Event</button></a>
     </div>
 </section>
