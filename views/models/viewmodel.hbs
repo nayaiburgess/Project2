@@ -1,0 +1,18 @@
+<section class="section">
+    <div class="container">
+      <h1 class="title">Events</h1>
+      {{#each showsList}}
+      <h2 class="subtitle">
+        {{name}}
+        </h2>
+        <p>
+        {{date}}
+        {{address}}
+        {{email}}
+        {{_id}}
+        </p>
+        <img src="{{flyer}}">      
+        </img>
+        {{/each}}
+    </div>
+  </section>
