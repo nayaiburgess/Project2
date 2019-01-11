@@ -32,19 +32,19 @@ const showController = {
     edit: (req, res) => {
         const showId = req.params.id
         // console.log(newslinkId)
-        res.render('fashion/editshow', {showId})
+        res.render('fashionshow/editshow', {showId})
     },
     update: (req, res) => {
         const showId = req.params.id
         console.log(req.body)
-        showos.findByIdAndUpdate(showId, req.body, {new: true}).then((show) => {
-            res.render(`/fashionshows/show`)
+        shows.findByIdAndUpdate(showId, req.body, {new: true}).then((show) => {
+            res.redirect(`/fashionshows`)
         })
     },
     delete: (req, res) => {
         const showId = req.params.id
         shows.findByIdAndRemove(showId).then(() => {
-            res.redirect('/fashionshow/show')
+            res.redirect('/fashionshows')
         })
     }
 }
