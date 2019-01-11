@@ -7,10 +7,10 @@ const showController = require('../controllers/showController')
 
 router.get('/', landingController.index)
 
-router.get('/fashionshows', showController.index)// all shows
+router.get('/fashionshows/:check', showController.index)// all shows
 router.get('/fashionshows/new', showController.new) // form to new show
 router.post('/fashionshows', showController.create) // posting to list of shows
-router.get('/fashionshows/:id', showController.show) //show specifc show
+router.get('/fashionshows/:id/:check', showController.show) //show specifc show
 router.get('/fashionshows/:id/editshow', showController.edit) // edit the show
 router.patch('/fashionshows/:id', showController.update) // updates the specific show 
 router.delete('/:id', showController.delete) // deletes show 

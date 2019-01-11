@@ -1,21 +1,42 @@
 <section class="section">
     <div class="container">
       <h1 class="title">Events</h1>
-      {{#each showsList}}
-      <h2 class="subtitle">
-        {{name}}
-        </h2>
-        <p>
-        {{date}}
+     </div>
+  </section> 
+  {{#each showsList}}
+
+ <article class="media">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <img src="{{flyer}}">
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <strong>{{name}}</strong> <small>{{email}}</small>
+        <br>
         {{address}}
-        {{email}}
-        {{_id}}
-        </p>
-        <img src="{{flyer}}">      
-        </img>
-        
-        <a href="/fashionshows/{{_id}}"><button>View Event</button></a>
-        <a><button>Add Event</button></a>
-        {{/each}}
+      
+      </p>
     </div>
-  </section>
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-reply"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-heart"></i></span>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div class="media-right">
+   <a href="/fashionshows/{{_id}}/agency"><button>View Event</button></a>
+        <a><button>Add Event</button></a>
+  </div>
+</article>
+{{/each}}

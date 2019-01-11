@@ -5,7 +5,6 @@ const RunwayModel = new Schema({
     name: String,
     age: Number,
     phone: Number,
-    email: String,
-    shows: []
+    email: String
 })
 module.exports = mongoose.model("RunwayModel", RunwayModel)

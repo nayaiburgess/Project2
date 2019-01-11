@@ -1,4 +1,11 @@
-<form action="/modelprofile" method="POST">
+<div class="tile is-parent is-6">
+    <article class="tile is-child box">
+      <p class="title">Start finding fashion shows now!</p>
+      <p class="subtitle">Create your model profile below.</p>
+      <div class="content">
+        
+        
+  <form action="/modelprofile" method="POST">
     <div class="field">
   <label class="label">{{name}}</label>
   <div class="control">
@@ -26,10 +33,8 @@
     <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com" name="email">
   </div>
 </div>
-<div>
-    <ul>
-        <li>{{#each show}}</li> {{/each}}
-    </ul>
-</div>
 <button type="submit">Done</button>
 </form>
+      </div>
+    </article>
+  </div>
