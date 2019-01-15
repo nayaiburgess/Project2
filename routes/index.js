@@ -12,7 +12,7 @@ router.get('/agencies/fashionshows', showController.indexAgencies)// all shows
 router.get('/agencies/fashionshows/new', showController.new) // form to new show
 router.post('/agencies/fashionshows', showController.create) // posting to list of shows
 router.get('/fashionshows/:id/:check', showController.show) //show specifc show
-router.get('/fashionshows/:id/editshow', showController.edit) // edit the show
+router.get('agencies/fashionshows/:id/editshow', showController.edit) // edit the show
 router.patch('/fashionshows/:id', showController.update) // updates the specific show 
 router.delete('/:id', showController.delete) // deletes show 
 

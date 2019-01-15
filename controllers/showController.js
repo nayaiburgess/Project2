@@ -33,7 +33,6 @@ const showController = {
       },
     edit: (req, res) => {
         const showId = req.params.id
-        // console.log(newslinkId)
         res.render('fashionshow/editshow', {showId})
     },
     update: (req, res) => {

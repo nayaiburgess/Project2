@@ -10,7 +10,6 @@ const runwayModelController = {
         res.render("models/modelprofile")
     },
     create: (req, res) => {
-        console.log(req.body)
         model.create({
             name: req.body.name,
             age: req.body.age,
@@ -24,7 +23,6 @@ const runwayModelController = {
     show: (req, res) => {
         const modelId = req.params.id
         model.findById(modelId).then((model) => {
-          console.log(model)
           res.render('models/viewmodel', { model })
         })
       },
